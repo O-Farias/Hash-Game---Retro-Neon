@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hash</title>
+    <link rel="stylesheet" href="/public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="modalNomes" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <h2>Insira os nomes dos jogadores</h2>
+        <div>
+          <input type="text" id="nomeJogador1" placeholder="Jogador 1" />
+        </div>
+
+        <div>
+          <input type="text" id="nomeJogador2" placeholder="Jogador 2" />
+        </div>
+
+        <button onclick="iniciarJogo()">Iniciar Jogo</button>
+      </div>
+    </div>
+    <div id="infoJogadores" class="info-jogadores">
+      <div id="nomeJogador1Container" class="nome-jogador-container">
+        <span id="jogador1" class="nome-jogador"></span>
+      </div>
+      <div id="vezContainer" class="vez-container">
+        <p id="vez">Vez de: <span id="nomeVez">Jogador 1</span></p>
+      </div>
+      <div id="nomeJogador2Container" class="nome-jogador-container">
+        <span id="jogador2" class="nome-jogador"></span>
+      </div>
+    </div>
+    <div id="mensagemVitoria" class="mensagem-vitoria">
+      <p id="textoVitoria"></p>
+      <button onclick="reiniciaJogo()">Jogar Novamente</button>
+    </div>
+    <h1>Jogo da Velha!</h1>
+    <div id="jogoDaVelha" class="tabuleiro">
+      <div class="celula" onclick="clicouCelula(this, 0)"></div>
+      <div class="celula" onclick="clicouCelula(this, 1)"></div>
+      <div class="celula" onclick="clicouCelula(this, 2)"></div>
+      <div class="celula" onclick="clicouCelula(this, 3)"></div>
+      <div class="celula" onclick="clicouCelula(this, 4)"></div>
+      <div class="celula" onclick="clicouCelula(this, 5)"></div>
+      <div class="celula" onclick="clicouCelula(this, 6)"></div>
+      <div class="celula" onclick="clicouCelula(this, 7)"></div>
+      <div class="celula" onclick="clicouCelula(this, 8)"></div>
+    </div>
+    <script src="/src/script.js"></script>
+  </body>
+</html>
